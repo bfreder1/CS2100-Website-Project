@@ -1,0 +1,20 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #800000;
+    color: #ffd700;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #002244 ;
+    color: #ffd700;
+    text-align: left;
+    font-family: 'Times New Roman', serif;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+}
+
+
