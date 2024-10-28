@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GrecianRealmsWikiForums</title>
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="../index.html">The Grecian Realms Wiki</a></h1>
+
+        <form id="search-form" action="/search">
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit">🔍</button>
+        </form>
+    </header>
+
+    <nav>
+        <a href="../about.html">About</a>
+        <a href="../maps/index.html">Maps</a>
+        <a href="../codex/index.html">Codex</a>
+        <a href="index.html">Contribute</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to the Grecian Realms Forum page!</h2>
+
+        <div class="forum-container">
+            <div id="forum-rules">
+                <h3>Forum Rules</h3>
+                <ul>
+                    <li>Be respectful of other users.</li>
+                    <li>Keep discussions on topic.</li>
+                    <li>Have fun!</li>
+                </ul>
+            </div>
+
+            <div id="forum-join">
+                <h3>Join the Discussion!</h3>
+                <p>Ready to join the conversation? Click the button below to post your own topic!</p>
+                <input type="submit" value="Join the Discussion!" id="mySubmit" onclick="toggleForm()">
+            </div>
+
+            <form id="forum-form" action="https://webdevbasics.net/scripts/demo.php" method="POST" onsubmit="toggleForm()">
+                <label for="myTitle">Title:</label>
+                <input type="text" id="myTitle" name="myTitle" required>
+
+                <label for="mySubject">Subject:</label>
+                <input type="text" id="mySubject" name="mySubject" required>
+
+                <label for="myFormat">Format:</label>
+                <select id="myFormat" name="myFormat" required>
+                    <option value="HTML">HTML</option>
+                    <option value="Markdown">Markdown</option>
+                    <option value="Plaintext">Plaintext</option>
+                </select>
+
+                <label for="myPost">Body:</label>
+                <textarea id="myPost" name="myPost" required></textarea>
+
+                <input type="submit" value="Post!" id="myPost">
+            </form>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleForm() {
+            const form = document.getElementById('forum-form');
+            const container = document.querySelector('.forum-container');
+
+            if (form.style.display === 'none' || !form.style.display) {
+                form.style.display = 'block'; 
+                container.classList.add('show-form'); 
+            } else {
+                form.style.display = 'none'; 
+                container.classList.remove('show-form'); 
+            }
+        }
+    </script>
+
+    <footer>
+        &copy; 2024 Bryson Frederick
+        <br>
+        <a href="mailto:bryson.t.frederick@gmail.com">bryson.t.frederick@gmail.com</a>
+    </footer>
+</body>
+
+</html>

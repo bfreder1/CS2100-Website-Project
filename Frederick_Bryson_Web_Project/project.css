@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Georgia', serif;
     background-color: #800000;
@@ -6,15 +10,504 @@ body {
     padding: 0;
 }
 
+main {
+    background-color: #800000;
+    color: #ffd700;
+    font-family: 'Times New Roman', serif;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main a {
+    color: #ffd700;
+}
+
+main a:hover {
+    color: #b29200;
+}
+
 header {
     width: 100%;
-    background-color: #002244 ;
+    background-color: #002244;
     color: #ffd700;
     text-align: left;
     font-family: 'Times New Roman', serif;
     box-sizing: border-box;
     padding: 20px;
     position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-start;
+}
+
+header h1 {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 
+header h1 a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    color: #b29200;
+}
+
+nav {
+    background-color: #002244;
+    color: #ffd700;
+    font-family: 'Times New Roman', serif;
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+nav a {
+    color: #ffd700;
+    background-color: #002244;
+    text-align: left;
+    font-family: 'Times New Roman', serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    position: relative;
+    font-size: x-large;
+    padding-right: 20px;
+}
+
+nav a:hover {
+    color: #b29200;
+}
+
+footer {
+    background-color: #002244;
+    color: #ffd700;
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+}
+
+footer a {
+    color: #ffd700;
+}
+
+footer a:hover {
+    color: #b29200;
+}
+
+hr {
+    border-color: #ffd700;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    font-size: large;
+    justify-items: center;
+}
+
+/* Overall table styling */
+table.codex {
+    width: 100%;
+    border-collapse: collapse;
+    /* Ensures borders are clean */
+    background-color: #800000;
+    /* Maroon background for the table */
+    font-family: 'Times New Roman', serif;
+    /* Classic serif font */
+    margin: 20px 0;
+    border: 2px solid #ffd700;
+    /* Gold border around the table */
+}
+
+/* Table header styling */
+table.codex th {
+    background-color: #002244;
+    /* Navy background for the header */
+    color: #ffd700;
+    /* Gold text */
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #ffd700;
+    /* Gold border */
+    text-align: left;
+}
+
+/* Table cell styling */
+table.codex td {
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ffd700;
+    /* Gold border for cells */
+    color: #ffd700;
+    /* Gold text */
+}
+
+/* Alternate row styling for zebra effect */
+table.codex tr:nth-child(even) {
+    background-color: #660000;
+    /* Darker maroon for alternating rows */
+}
+
+/* Hover effect for rows */
+table.codex tr:hover {
+    background-color: #4d0000;
+    /* Darker background on hover */
+    color: #ffd700;
+}
+
+/* Link styling inside the table */
+table.codex a {
+    color: #ffd700;
+    /* Gold links */
+    text-decoration: none;
+}
+
+table.codex a:hover {
+    color: #b29200;
+    /* Deeper gold hover effect */
+    text-decoration: underline;
+    /* Optional: underline on hover */
+}
+
+/* Overall table styling for the artifacts page */
+table.artifacts {
+    width: 100%;
+    border-collapse: collapse;
+    /* Keeps borders clean and connected */
+    background-color: #800000;
+    /* Maroon background */
+    font-family: 'Times New Roman', serif;
+    /* Classic serif font for a historical look */
+    color: #ffd700;
+    /* Gold text color */
+    margin: 20px 0;
+    /* Space around the table */
+}
+
+/* Table header styling for sections (The Armory, Wondrous Items) */
+table.artifacts th[scope="colgroup"] {
+    background-color: #002244;
+    /* Navy background for section headers */
+    padding: 15px;
+    font-size: 1.4rem;
+    border: 2px solid #ffd700;
+    /* Gold border around the header */
+    text-align: center;
+    font-variant: small-caps;
+    /* Give the titles a classical, elegant look */
+}
+
+/* Column headers (Name, Type, Summary) */
+table.artifacts th[scope="col"] {
+    background-color: #660000;
+    /* Darker maroon background for headers */
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #ffd700;
+    /* Gold border */
+    text-align: left;
+}
+
+/* Table cell styling */
+table.artifacts td {
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ffd700;
+    /* Gold border for all cells */
+    color: #ffd700;
+    /* Gold text */
+}
+
+/* Alternate row styling for readability */
+table.artifacts tr:nth-child(even) {
+    background-color: #660000;
+    /* Slightly darker maroon for even rows */
+}
+
+/* Hover effect for rows */
+table.artifacts tr:hover {
+    background-color: #4d0000;
+    /* Darker maroon on hover */
+    color: #ffd700;
+    /* Maintain gold text */
+}
+
+/* Link styling inside the table */
+table.artifacts a {
+    color: #ffd700;
+    /* Gold links */
+    text-decoration: none;
+    /* No underline for links */
+}
+
+table.artifacts a:hover {
+    color: #b29200;
+    /* Deeper gold on hover */
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+
+
+#search-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+#search-form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    font-size: large;
+    background-color: #002244;
+    color: #ffd700;
+    font-family: 'Times New Roman', serif;
+}
+
+#search-form input[type="text"]::placeholder {
+    color: #ffd700;
+}
+
+#search-form button {
+    background: none;
+    border: none;
+    color: #ffd700;
+    font-size: large;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+#search-form button:hover {
+    color: #b29200;
+}
+
+/* Forum Rules Section Styling */
+#forum-rules {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Match the width of the join section */
+    margin: 20px auto; /* Center the section horizontally */
+    padding: 20px;
+    background-color: #660000; /* Slightly darker maroon for containers */
+    border: 2px solid #ffd700; /* Gold border */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 2px rgba(255, 215, 0, 0.5); /* Subtle shadow */
+}
+
+/* Heading Styling */
+#forum-rules h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffd700; /* Gold text */
+    font-family: 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-variant: small-caps; /* Classical touch */
+}
+
+/* Forum Rules List Styling */
+#forum-rules ul {
+    list-style-type: upper-roman;
+    margin: 0;
+    padding-left: 30px; /* Indent to align with the rest of the content */
+    font-family: 'Times New Roman', serif;
+    color: #ffd700; /* Gold text */
+    font-size: 1rem;
+}
+
+/* List Item Styling */
+#forum-rules ul li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+/* Container for the join section*/
+#forum-join {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Optional: limit width to prevent it from being too wide */
+    margin: 20px auto; /* Center horizontally */
+    padding: 20px;
+    background-color: #660000; /* Slightly darker maroon for containers */
+    border: 2px solid #ffd700; /* Gold border */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    box-shadow: 0px 0px 10px 2px rgba(255, 215, 0, 0.5); /* Subtle glow effect */
+}
+
+#forum-form{
+    display: none;
+    flex-direction: column;
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Optional: limit width to prevent it from being too wide */
+    margin: 20px auto; /* Center horizontally */
+    padding: 20px;
+    background-color: #660000; /* Slightly darker maroon for containers */
+    border: 2px solid #ffd700; /* Gold border */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    box-shadow: 0px 0px 10px 2px rgba(255, 215, 0, 0.5); /* Subtle glow effect */
+}
+
+/* Headings and text styling */
+#forum-join h3, #forum-join p {
+    margin-bottom: 10px;
+    text-align: center; /* Center-align for a neat appearance */
+}
+
+/* Input and select fields styling */
+input[type="text"], textarea, select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
+    border: 2px solid #ffd700; /* Gold border */
+    background-color: #4d0000; /* Darker maroon for input background */
+    color: #ffd700;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+input[type="submit"] {
+    background-color: #002244; /* Navy background for buttons */
+    color: #ffd700; /* Gold text */
+    border: 2px solid #ffd700;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button hover effect */
+input[type="submit"]:hover {
+    background-color: #b29200; /* Deep gold on hover */
+    color: #002244; /* Navy text on hover */
+}
+
+.twothird {
+    float: left;
+    width: 60%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.onethird {
+    float: left;
+    width: 33.33%;
+    padding-right: 2em;
+    font-size: large;
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 200px;
+    background-color: #ccc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #ffd700;
+}
+
+.onehalf {
+    float: left;
+    width: 50%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.centered {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.centered ul {
+    text-align: left;
+    margin-left: 20px;
+    padding-left: 20px;
+
+}
+
+/* General Container Styling */
+.forum-container {
+    display: grid;
+    gap: 20px; /* Space between elements */
+    padding: 20px;
+    box-sizing: border-box;
+    grid-template-columns: 1fr; /* Single column by default */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+@media screen and (min-width: 600px) {
+
+    .forum-container {
+        grid-template-rows: auto; /* Forum rules take full row */
+        grid-template-columns: 1fr 1fr; /* Join and Form side by side */
+        grid-template-areas:
+            "forum-rules forum-rules"
+            "forum-join forum-join";
+    }
+
+    #forum-rules {
+        grid-area: forum-rules; /* Place rules in the first column */
+    }
+
+    #forum-join {
+        grid-area: forum-join; /* Place join section in the second column */
+    }
+
+    #forum-form {
+        grid-area: forum-form; /* Place form in the second column */
+    }
+
+    .forum-container.show-form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "forum-rules forum-rules"
+            "forum-join forum-form"; /* Form appears below the join section */
+    }
+}
+
+/* Default: 2 Columns for min-width of 1024px */
+@media (min-width: 1024px) {
+    .forum-container {
+        grid-template-columns: 1fr 1fr; /* Two columns initially */
+        grid-template-areas:
+            "forum-rules forum-join"; /* Rules and Join section */
+    }
+
+    #forum-form {
+        display: none; /* Form hidden by default */
+    }
+}
+
+/* 3 Columns After the Form is Revealed */
+@media (min-width: 1024px) {
+    .forum-container.show-form {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+        grid-template-areas:
+            "forum-rules forum-join forum-form"; /* Arrange all three sections */
+    }
+}
