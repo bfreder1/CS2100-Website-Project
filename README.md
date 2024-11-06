@@ -10,3 +10,5 @@ Overview:
 * The website can be visited by using the following link: https://bfreder1.github.io/CS2100-Website-Project/index.html 
 
 Note for Reviewer: Several sections of the website are stubbed out and have not been completed yet. 
+
+Submission notes 11/5/2024: I was unable to get the image gallery working how I wanted it, the example in 11.7 does not work on smaller screens and trying to adapt that style into a responsive format proved too difficult a task.

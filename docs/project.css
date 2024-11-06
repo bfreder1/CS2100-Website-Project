@@ -365,6 +365,72 @@ table.artifacts a:hover {
     text-align: center; /* Center-align for a neat appearance */
 }
 
+/* General styling for the map gallery container */
+#map-gallery {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center content horizontally */
+    margin: 0 auto; /* Center the gallery within the page */
+    max-width: 100%; /* Prevent the gallery from overflowing */
+}
+
+/* Styling for the unordered list in the gallery */
+#map-gallery ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: center; /* Center images horizontally */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Remove bullet points */
+    gap: 10px; /* Space between images */
+}
+
+/* Styling for individual list items */
+#map-gallery li {
+    position: relative; /* Position relative to handle the span positioning */
+    flex: 1 1 100px; /* Flexible basis with a minimum width of 100px */
+    max-width: 150px; /* Limit the maximum width of each item */
+    padding: 5px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+/* Styling for images */
+#map-gallery img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border: none; /* Remove borders */
+    display: block; /* Remove extra spacing around images */
+}
+
+/* Styling for the span text */
+#map-gallery span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    opacity: 0; /* Hide the text initially */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #ffd700; /* Gold text for readability */
+    padding: 5px 10px;
+    border-radius: 4px; /* Rounded corners for a softer look */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    text-align: center; /* Center the text */
+    pointer-events: none; /* Prevent the text from interfering with hover */
+    z-index: 1; /* Ensure the text appears above the image */
+}
+
+/* Hover effect for the list items */
+#map-gallery li:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+#map-gallery li:hover span {
+    opacity: 1; /* Make the text fully visible */
+    transform: translate(-50%, -40%); /* Move the text up slightly */
+    z-index: 1; /* Ensure the text appears above other elements */
+}
+
 /* Input and select fields styling */
 input[type="text"], textarea, select {
     width: 100%;
