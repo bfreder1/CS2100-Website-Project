@@ -431,8 +431,108 @@ table.artifacts a:hover {
     z-index: 1; /* Ensure the text appears above other elements */
 }
 
+/* Donation Rules Section Styling */
+#donations-rules {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Match the width of the join section */
+    margin: 20px auto; /* Center the section horizontally */
+    padding: 20px;
+    background-color: #660000; /* Slightly darker maroon for containers */
+    border: 2px solid #ffd700; /* Gold border */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 2px rgba(255, 215, 0, 0.5); /* Subtle shadow */
+}
+
+/* Heading Styling */
+#donations-rules h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffd700; /* Gold text */
+    font-family: 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-variant: small-caps; /* Classical touch */
+}
+
+/* Forum Rules List Styling */
+#donations-rules ul {
+    list-style-type: upper-roman;
+    margin: 0;
+    padding-left: 30px; /* Indent to align with the rest of the content */
+    font-family: 'Times New Roman', serif;
+    color: #ffd700; /* Gold text */
+    font-size: 1rem;
+}
+
+/* List Item Styling */
+#donations-rules ul li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+/* Container for the join section*/
+#donations-join {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Optional: limit width to prevent it from being too wide */
+    margin: 20px auto; /* Center horizontally */
+    padding: 20px;
+    background-color: #660000; /* Slightly darker maroon for containers */
+    border: 2px solid #ffd700; /* Gold border */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    box-shadow: 0px 0px 10px 2px rgba(255, 215, 0, 0.5); /* Subtle glow effect */
+}
+
+/* Donations Join List Styling */
+#donations-join  ul {
+    list-style-type: upper-roman;
+    margin: 0;
+    padding-left: 30px; /* Indent to align with the rest of the content */
+    font-family: 'Times New Roman', serif;
+    color: #ffd700; /* Gold text */
+    font-size: 1rem;
+}
+
+/* List Item Styling */
+#donations-join  ul li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+#donations-form{
+    display: none;
+    flex-direction: column;
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Optional: limit width to prevent it from being too wide */
+    margin: 20px auto; /* Center horizontally */
+    padding: 20px;
+    background-color: #660000; /* Slightly darker maroon for containers */
+    border: 2px solid #ffd700; /* Gold border */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    box-shadow: 0px 0px 10px 2px rgba(255, 215, 0, 0.5); /* Subtle glow effect */
+}
+
+/* Headings and text styling */
+#donations-join h3, #donations-join p {
+    margin-bottom: 10px;
+    text-align: center; /* Center-align for a neat appearance */
+}
+
 /* Input and select fields styling */
 input[type="text"], textarea, select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 1rem;
+    border: 2px solid #ffd700; /* Gold border */
+    background-color: #4d0000; /* Darker maroon for input background */
+    color: #ffd700;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="email"] {
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
@@ -526,6 +626,17 @@ input[type="submit"]:hover {
     margin: 0 auto; /* Center horizontally */
 }
 
+/* General Conatiner Styling */
+.donation-container {
+    display: grid;
+    gap: 20px; /* Space between elements */
+    padding: 20px;
+    box-sizing: border-box;
+    grid-template-columns: 1fr; /* Single column by default */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center horizontally */
+}
+
 @media screen and (min-width: 600px) {
 
     .forum-container {
@@ -554,6 +665,33 @@ input[type="submit"]:hover {
             "forum-rules forum-rules"
             "forum-join forum-form"; /* Form appears below the join section */
     }
+
+    .donation-container {
+        grid-template-rows: auto; /* Donation rules take full row */
+        grid-template-columns: 1fr 1fr; /* Join and Form side by side */
+        grid-template-areas:
+            "donations-rules donations-rules"
+            "donations-join donations-join";
+    }
+
+    #donations-rules {
+        grid-area: donations-rules; /* Place rules in the first column */
+    }
+
+    #donations-join {
+        grid-area: donations-join; /* Place rules in the first column */
+    }
+
+    #donations-form {
+        grid-area: donations-form; /* Place form in the second column */
+    }   
+
+    .donation-container.show-form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "donations-rules donations-rules"
+            "donations-join donations-form"; /* Form appears below the join section */
+    }
 }
 
 /* Default: 2 Columns for min-width of 1024px */
@@ -567,6 +705,17 @@ input[type="submit"]:hover {
     #forum-form {
         display: none; /* Form hidden by default */
     }
+
+    .donation-container {
+        grid-template-columns: 1fr 1fr; /* Two columns initially */
+        grid-template-areas:
+            "donations-rules donations-join"; /* Rules and Join section */
+    }
+
+    #donations-form {
+        display: none; /* Form hidden by default */
+    }
+    
 }
 
 /* 3 Columns After the Form is Revealed */
@@ -575,5 +724,11 @@ input[type="submit"]:hover {
         grid-template-columns: 1fr 1fr 1fr; /* Three columns */
         grid-template-areas:
             "forum-rules forum-join forum-form"; /* Arrange all three sections */
+    }
+
+    .donation-container.show-form {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+        grid-template-areas:
+            "donations-rules donations-join donations-form"; /* Arrange all three sections */
     }
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GrecianRealmsWikiDonations</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">The Grecian Realms Wiki</a></h1>
+
+        <form id="search-form" action="/search">
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit">🔍</button>
+        </form>
+    </header>
+
+    <nav>
+        <a href="about.html">About</a>
+        <a href="maps/index.html">Maps</a>
+        <a href="codex/index.html">Codex</a>
+        <a href="contribute/index.html">Contribute</a>
+        <a href="donations.html">Donations</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to the Grecian Realms donations page!</h2>
+
+        <div class="donation-container">
+            <div id="donations-rules">
+                <h3>Donation FAQs</h3>
+                <ul>
+                    <li>What can I donate?</li>
+                    <p>Donations can be made in the form of money.</p>
+                    <li>How can I donate?</li>
+                    <p>Simply fill out the form!</p>
+                    <li>What will my donation be used for?</li>
+                    <p>Your donation will be used to help us maintain and improve the Grecian Realms Wiki. This includes
+                        hosting fees, server costs, and development expenses.</p>
+                    <li>Can I donate anonymously?</li>
+                    <p>Yes! We respect your privacy, and will never share your personal information with anyone.</p>
+                </ul>
+            </div>
+
+            <div id="donations-join">
+                <h3>Donate Now!</h3>
+                <p>Looking to make a donation? Fill out the form below to get started!</p>
+                <ul>
+                    <li>Bronze Package: $10</li>
+                    <p>Our Bronze Package includes a special thank you message on our website!</p>
+                    <li>Silver Package: $25</li>
+                    <p>Our Silver Package includes a special thank you message on our website, as well as a shoutout on our
+                        social media channels!</p>
+                    <li>Gold Package: $50</li>
+                    <p>Our Gold Package includes a special thank you message on our website, a shoutout on our social media
+                        channels, and a personalized thank you card!</p>
+                </ul>
+                <input type="submit" value="Donate Now!" id="mySubmit" onclick="toggleForm()">
+            </div>
+
+            <form id="donations-form" action="https://ww10.aitsafe.com/cf/add.cfm" method="POST" onsubmit="toggleForm()">
+                <input type="hidden" name="userid" value="C3386291">
+
+                <label for="donationPackage">Donation Package:</label>
+                <select id="donationPackage" name="product" size="3" required onchange="updatePrice()">
+                    <option value="Bronze Tier Donation">Bronze</option>
+                    <option value="Silver Tier Donation">Silver</option>
+                    <option value="Gold Tier Donation">Gold</option>
+                </select>
+
+                <input type="hidden" name="price" id="price" value="">
+
+                <input type="submit" value="Donate!">
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function toggleForm() {
+            const form = document.getElementById('donations-form');
+            const container = document.querySelector('.donation-container');
+
+            if (form.style.display === 'none' || !form.style.display) {
+                form.style.display = 'block'; 
+                container.classList.add('show-form'); 
+            } else {
+                form.style.display = 'none'; 
+                container.classList.remove('show-form'); 
+            }
+        }
+
+        function updatePrice() {
+            const select = document.getElementById('donationPackage');
+            const price = document.getElementById('price');
+
+            if (select.value === 'Bronze Tier Donation') {
+                price.value = '10';
+            } else if (select.value === 'Silver Tier Donation') {
+                price.value = '25';
+            } else if (select.value === 'Gold Tier Donation') {
+                price.value = '50';
+            }
+        }
+    </script>
+
+    <footer>
+        &copy; 2024 Bryson Frederick
+        <br>
+        <a href="mailto:bryson.t.frederick@gmail.com">bryson.t.frederick@gmail.com</a>
+    </footer>
+</body>
+
+</html>
