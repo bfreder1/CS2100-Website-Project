@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>GrecianRealmsWikiForums</title>
     <link rel="stylesheet" href="../project.css">
+    <meta name="description"
+        content="Join the Grecian Realms Wiki forums! Share ideas, discuss lore, and connect with fellow enthusiasts of this ancient Greece-inspired D&D campaign setting.">
 </head>
 
 <body>
@@ -44,7 +46,8 @@
                 <input type="submit" value="Join the Discussion!" id="mySubmit" onclick="toggleForm()">
             </div>
 
-            <form id="forum-form" action="https://webdevbasics.net/scripts/demo.php" method="POST" onsubmit="toggleForm()">
+            <form id="forum-form" action="https://webdevbasics.net/scripts/demo.php" method="POST"
+                onsubmit="toggleForm()">
                 <label for="myTitle">Title:</label>
                 <input type="text" id="myTitle" name="myTitle" required>
 
@@ -73,11 +76,11 @@
             const container = document.querySelector('.forum-container');
 
             if (form.style.display === 'none' || !form.style.display) {
-                form.style.display = 'block'; 
-                container.classList.add('show-form'); 
+                form.style.display = 'block';
+                container.classList.add('show-form');
             } else {
-                form.style.display = 'none'; 
-                container.classList.remove('show-form'); 
+                form.style.display = 'none';
+                container.classList.remove('show-form');
             }
         }
     </script>

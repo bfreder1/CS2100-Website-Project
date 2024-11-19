@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>GrecianRealmsWikiDonations</title>
     <link rel="stylesheet" href="project.css">
+    <meta name="description"
+        content="Support the Grecian Realms Wiki! Donate to help cover hosting fees, server costs, and development. Choose from Bronze, Silver, or Gold packages today.">
 </head>
 
 <body>
@@ -51,16 +53,19 @@
                     <li>Bronze Package: $10</li>
                     <p>Our Bronze Package includes a special thank you message on our website!</p>
                     <li>Silver Package: $25</li>
-                    <p>Our Silver Package includes a special thank you message on our website, as well as a shoutout on our
+                    <p>Our Silver Package includes a special thank you message on our website, as well as a shoutout on
+                        our
                         social media channels!</p>
                     <li>Gold Package: $50</li>
-                    <p>Our Gold Package includes a special thank you message on our website, a shoutout on our social media
+                    <p>Our Gold Package includes a special thank you message on our website, a shoutout on our social
+                        media
                         channels, and a personalized thank you card!</p>
                 </ul>
                 <input type="submit" value="Donate Now!" id="mySubmit" onclick="toggleForm()">
             </div>
 
-            <form id="donations-form" action="https://ww10.aitsafe.com/cf/add.cfm" method="POST" onsubmit="toggleForm()">
+            <form id="donations-form" action="https://ww10.aitsafe.com/cf/add.cfm" method="POST"
+                onsubmit="toggleForm()">
                 <input type="hidden" name="userid" value="C3386291">
 
                 <label for="donationPackage">Donation Package:</label>
@@ -83,11 +88,11 @@
             const container = document.querySelector('.donation-container');
 
             if (form.style.display === 'none' || !form.style.display) {
-                form.style.display = 'block'; 
-                container.classList.add('show-form'); 
+                form.style.display = 'block';
+                container.classList.add('show-form');
             } else {
-                form.style.display = 'none'; 
-                container.classList.remove('show-form'); 
+                form.style.display = 'none';
+                container.classList.remove('show-form');
             }
         }
 
