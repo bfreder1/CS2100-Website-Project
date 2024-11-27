@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../project.css">
     <meta name="description"
         content="Explore maps from the Grecian Realms D&D campaign, including Mycenae Docks, Persephone's Garden, Hades' Palace Gates, and more epic locations.">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -33,72 +35,51 @@
             <h3>Explore some of the setpieces from the campaign!</h3>
         </div>
 
-        <div id="map-gallery">
-            <ul>
-                <li>
-                    <a href="../../images/Docks_map.png">
-                        <img src="../../images/Docks_map.png" width="100" height="75" alt="Docks Map">
-                        <span>
-                            <img src="../../images/Docks_map.png" alt="Docks Map" width="400" height="300">
-                            <br>Docks of Mycenae
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../../images/garden_of_persephone_map.png">
-                        <img src="../../images/garden_of_persephone_map.png" width="100" height="75"
-                            alt="Garden of Persephone Map">
-                        <span>
-                            <img src="../../images/garden_of_persephone_map.png" width="400" height="300"
-                                alt="Garden of Persephone Map">
-                            <br>Garden of Persephone
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../../images/hades_palace_gates_map.png">
-                        <img src="../../images/hades_palace_gates_map.png" width="100" height="75"
-                            alt="Hades Palace Gates Map">
-                        <span>
-                            <img src="../../images/hades_palace_gates_map.png" width="400" height="300"
-                                alt="Hades Palace Gates Map">
-                            <br>Hades Palace Gates
-                        </span>
-                    </a>
-                </li>
+        <div id="map-slideshow">
+            <div class="map-slide">
+                <a href="../../images/Docks_map.png" target="_blank">
+                    <img src="../../images/Docks_map.png" alt="Docks Map">
+                </a>
+                <caption>Docks of Mycenae</caption>
+            </div>
+        
+            <div class="map-slide">
+                <a href="../../images/garden_of_persephone_map.png" target="_blank">
+                    <img src="../../images/garden_of_persephone_map.png" alt="Garden of Persephone Map">
+                </a>
+                <caption>Garden of Persephone</caption>
+            </div>
+        
+            <div class="map-slide">
+                <a href="../../images/hades_palace_gates_map.png" target="_blank">
+                    <img src="../../images/hades_palace_gates_map.png" alt="Hades Palace Gates Map">
+                </a>
+                <caption>Hades Palace Gates</caption>
+            </div>
+        
+            <div class="map-slide">
+                <a href="../../images/Map_of_island.png" target="_blank">
+                    <img src="../../images/Map_of_island.png" alt="Map of Island">
+                </a>
+                <caption>Map of the Lich's domain</caption>
+            </div>
+        
+            <div class="map-slide">
+                <a href="../../images/Statue_of_Athena_map.png" target="_blank">
+                    <img src="../../images/Statue_of_Athena_map.png" alt="Statue of Athena Map">
+                </a>
+                <caption>Statue of Athena</caption>
+            </div>
+        
+            <div class="map-slide">
+                <a href="../../images/throne_of_hades_map.png" target="_blank">
+                    <img src="../../images/throne_of_hades_map.png" alt="Throne of Hades Map">
+                </a>
+                <caption>Throne of Hades</caption>
+            </div>
 
-                <li>
-                    <a href="../../images/Map_of_island.png">
-                        <img src="../../images/Map_of_island.png" width="100" height="75" alt="Map of Island">
-                        <span>
-                            <img src="../../images/Map_of_island.png" alt="Map of Island" width="400" height="300">
-                            <br>Map of the Lich's domain
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../../images/Statue_of_Athena_map.png">
-                        <img src="../../images/Statue_of_Athena_map.png" width="100" height="75"
-                            alt="Statue of Athena Map">
-                        <span>
-                            <img src="../../images/Statue_of_Athena_map.png" width="400" height="300"
-                                alt="Statue of Athena Map">
-                            <br>Statue of Athena
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../../images/throne_of_hades_map.png">
-                        <img src="../../images/throne_of_hades_map.png" width="100" height="75"
-                            alt="Throne of Hades Map">
-                        <span>
-                            <img src="../../images/throne_of_hades_map.png" width="400" height="300"
-                                alt="Throne of Hades Map">
-                            <br>Throne of Hades
-                        </span>
-                    </a>
-                </li>
-            </ul>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
         </div>
     </main>
 
@@ -108,5 +89,36 @@
         <a href="mailto:bryson.t.frederick@gmail.com">bryson.t.frederick@gmail.com</a>
     </footer>
 </body>
+<script>
+    $(document).ready(function () {
+        let currentIndex = 0; // Index of the currently displayed image
+        const slides = $(".map-slide"); // Get all slideshow slides
+        const totalSlides = slides.length; // Total number of slides
+
+        // Function to show the current slide
+        function showSlide(index) {
+            slides.hide(); // Hide all slides
+            slides.eq(index).fadeIn(1500); // Show the current slide with fade effect
+        }
+
+        // Function to move to the next slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides; // Increment and loop back to 0 if at the end
+            showSlide(currentIndex);
+        }
+
+        // Function to move to the previous slide
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Decrement and loop back to the last slide
+            showSlide(currentIndex);
+        }
+
+        // Event listeners for navigation buttons
+        $(".next").click(nextSlide);
+        $(".prev").click(prevSlide);
+
+        setInterval(nextSlide, 5000); // Change the slide every 3 seconds
+    });
+</script>
 
 </html>
