@@ -11,4 +11,4 @@ Overview:
 
 Note for Reviewer: Several sections of the website are stubbed out and have not been completed yet. 
 
-Submission notes 11/19/24: Big update for the check-in is the addition of the spear-of-athens page. It is the template for future content pages and with it I can get the rest of the content pages online.
+Submission notes 11/26/24: Changed the image gallery in the maps section to a slideshow. The basic content page structure involves some interactive Javascript, as do the forms in contribute and donations.
