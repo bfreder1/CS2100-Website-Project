@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let searchIndex = [];
 
     // Load the search index
-    fetch("../../../search-index.json")
+    fetch("/search-index.json")
         .then(response => response.json())
         .then(data => {
             searchIndex = data;
