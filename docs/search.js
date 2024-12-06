@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     let searchIndex = [];
 
-    const baseurl = window.location.origin;
+    const reponame = window.location.pathname.split("/")[1];
+    const baseurl = window.location.origin + "/" + reponame;
     // Load the search index
     fetch(`${baseurl}/search-index.json`)
         .then(response => response.json())
