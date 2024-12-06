@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const baseurl = window.location.origin;
     // Load the search index
-    fetch(`${baseurl}/search.json`)
+    fetch(`${baseurl}/search-index.json`)
         .then(response => response.json())
         .then(data => {
             searchIndex = data;
