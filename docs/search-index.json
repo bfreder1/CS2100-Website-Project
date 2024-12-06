@@ -1,42 +1,42 @@
 [
     {
         "title": "AboutGrecianRealmsWiki",
-        "url": "docs/about.html",
+        "url": "about.html",
         "keywords": "Learn about the Grecian Realms Wiki, a D&D world inspired by ancient Greece. Explore its history, author, and dedication to collaborative storytelling."
     },
     {
         "title": "GrecianRealmsWikiDonations",
-        "url": "docs/donations.html",
+        "url": "donations.html",
         "keywords": "Support the Grecian Realms Wiki! Donate to help cover hosting fees, server costs, and development. Choose from Bronze, Silver, or Gold packages today."
     },
     {
         "title": "GrecianRealmsWikiHome",
-        "url": "docs/index.html",
+        "url": "index.html",
         "keywords": "The Grecian Realms Wiki documents a D&D world inspired by ancient Greece. Explore gods, heroes, maps, and lore, or contribute to the adventure!"
     },
     {
         "title": "CodexGrecianRealms",
-        "url": "docs/codex/index.html",
+        "url": "codex/index.html",
         "keywords": "Discover the Codex of the Grecian Realms, a living document detailing gods, heroes, monsters, artifacts, and key locations in this D&D-inspired world."
     },
     {
         "title": "CodexGrecianRealms",
-        "url": "docs/codex/artifacts/index.html",
+        "url": "codex/artifacts/index.html",
         "keywords": "Explore magical artifacts of the Grecian Realms, including legendary weapons, wondrous items, and ancient relics sought by heroes and villains alike."
     },
     {
         "title": "GrecianRealmsSpearOfAthens",
-        "url": "docs/codex/artifacts/weapons/spear-of-athens.html",
+        "url": "codex/artifacts/weapons/spear-of-athens.html",
         "keywords": "Explore the legend of the Spear of Athens, a mythical artifact forged by Hephaestus and blessed by Athena. Discover its history, origins, powers, and its rediscovery in the Grecian Realms."
     },
     {
         "title": "GrecianRealmsWikiForums",
-        "url": "docs/contribute/index.html",
+        "url": "contribute/index.html",
         "keywords": "Join the Grecian Realms Wiki forums! Share ideas, discuss lore, and connect with fellow enthusiasts of this ancient Greece-inspired D&D campaign setting."
     },
     {
         "title": "GrecianRealmsWikiMaps",
-        "url": "docs/maps/index.html",
+        "url": "maps/index.html",
         "keywords": "Explore maps from the Grecian Realms D&D campaign, including Mycenae Docks, Persephone's Garden, Hades' Palace Gates, and more epic locations."
     }
 ]
