@@ -713,6 +713,30 @@ input[type="submit"]:hover {
     background-color: #a58700c1; /* Bronze to indicate active section */
 }
 
+/* Search results styling */
+#search-results {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ffd700;
+    border-radius: 8px;
+    background-color: #4d0000;
+}
+
+.search-result {
+    margin-bottom: 10px;
+}
+
+.search-result a {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.search-result a:hover {
+    text-decoration: underline;
+    color: #b29200;
+}
+
 @media screen and (min-width: 600px) {
 
     .forum-container {
