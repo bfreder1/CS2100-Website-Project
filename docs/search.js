@@ -39,5 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             resultsContainer.innerHTML = "<p>No results found.</p>";
         }
+
+        document.getElementById("search-results").style.display = "block";
     });
 });
