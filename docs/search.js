@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const resultItem = document.createElement("div");
                 resultItem.classList.add("search-result");
                 resultItem.innerHTML = `
-                    <a href="${baseurl + result.url}" target="_blank">${result.title}</a>
+                    <a href="${baseurl + "/" + result.url}" target="_blank">${result.title}</a>
                 `;
                 resultsContainer.appendChild(resultItem);
             });
